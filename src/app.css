@@ -1,0 +1,124 @@
+ul {
+  position: relative;
+  /*for example purposes only*/
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  position: absolute;
+  -webkit-transition: all 1.5s linear;
+  -moz-transition: all 1.5s linear;
+  transition: all 1.5s linear;
+  display: inline-block;
+}
+
+.search-box {
+  width: 206px;
+  background-color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  height: 1rem;
+  outline: none;
+  padding: 5px;
+}
+
+/* popup dialog */
+
+.mapboxgl-popup-content {
+  background-color: #0606CC !important;
+}
+
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+  border-bottom-color: #0606CC !important;
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+  border-top-color: #0606CC !important;
+}
+
+.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+  border-right-color: #0606CC !important;
+}
+
+.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+  border-left-color: #0606CC !important;
+}
+
+.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip {
+  border-top-color: #0606CC !important;
+}
+
+.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip {
+  border-top-color: #0606CC !important;
+}
+
+.mapboxgl-popup-close-button {
+  color: #fff !important;
+}
+
+/* for user point pulse */
+
+.pulse-button {
+  display: block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  border: none;
+  border-radius: 50%;
+  background: #0606CC;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgb(83, 83, 204);
+  animation: pulse 1.5s infinite;
+  -webkit-animation: pulse 1.5s infinite;
+}
+
+
+@-webkit-keyframes pulse {
+  0% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  70% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
+  }
+
+  100% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+  }
+}
+
+.more-info:hover {
+  opacity: .7;
+}
+
+.intercom-area {
+  z-index: 99999;
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .intercom-area {
+    z-index: 99999;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+}
