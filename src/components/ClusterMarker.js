@@ -11,22 +11,20 @@ export const style = {
 };
 
 class ClusterMarker extends React.PureComponent {
-	constructor(props) {
-		super(props);
-		this.onClick = this.onClick.bind(this);
-	}
-
-	onClick() {
-		const { onClick, ...cluster } = this.props;
-		onClick(cluster);
-	}
+	onMarkerClick = () => {
+		const { onClusterClick, ...cluster } = this.props;
+		onClusterClick(cluster);
+	};
 
 	render() {
 		const { longitude, latitude, pointCount } = this.props;
 
 		return (
 			<Marker longitude={longitude} latitude={latitude}>
-				<div onClick={this.onClick} style={{ ...style, background: '#f28a25' }}>
+				<div
+					onClick={this.onMarkerClick}
+					style={{ ...style, background: '#f28a25' }}
+				>
 					{pointCount}
 				</div>
 			</Marker>
